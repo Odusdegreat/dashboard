@@ -1,7 +1,8 @@
 // src/pages/Login.tsx
 import React, { useState } from "react";
 import styles from "../styles/Login.module.scss";
-import illustration from "../assets/illustrations.svg"; // make sure the image path is correct
+import illustration from "../assets/illustrations.svg";
+import UnionIcon from "../assets/Union.svg";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,10 +10,13 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <div className={styles.logo}>lendsqr</div>
+        <div className={styles.logo}>
+          <img src={UnionIcon} alt="Union Icon" />
+          <span>lendsqr</span>
+        </div>
         <img
           src={illustration}
-          alt="login illustration"
+          alt="illustration"
           className={styles.illustration}
         />
       </div>
@@ -24,7 +28,6 @@ const Login = () => {
 
           <form>
             <input type="email" placeholder="Email" required />
-
             <div className={styles.passwordField}>
               <input
                 type={showPassword ? "text" : "password"}
@@ -35,7 +38,6 @@ const Login = () => {
                 {showPassword ? "HIDE" : "SHOW"}
               </span>
             </div>
-
             <a href="#" className={styles.forgotLink}>
               FORGOT PASSWORD?
             </a>
