@@ -35,7 +35,7 @@ const Login = () => {
                 required
               />
               <span onClick={() => setShowPassword(!showPassword)}>
-                {showPassword ? "HIDE" : "SHOW"}
+                {showPassword ? "SHOW" : "HIDE"}
               </span>
             </div>
             <a href="#" className={styles.forgotLink}>
